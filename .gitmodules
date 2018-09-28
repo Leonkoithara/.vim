@@ -1,0 +1,9 @@
+[submodule "plugged/nerdtree"]
+	path = plugged/nerdtree
+	url = https://github.com/scrooloose/nerdtree/tree/808f5b225b090bb4a94a2c47bb08d1bc1f7f8a4e
+[submodule "plugged/vim-fugitive"]
+	path = plugged/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "plugged/youcompleteme"]
+	path = plugged/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe
