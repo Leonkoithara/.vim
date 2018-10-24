@@ -1,8 +1,11 @@
 syntax enable
+ 
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+ 
 set number relativenumber
+ 
 set laststatus=2
 set statusline+=%{fugitive#statusline()}
 set statusline+=\ %t
