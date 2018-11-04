@@ -31,3 +31,4 @@ nnoremap <C-n> :tabnew<Space>
 nnoremap <C-c> :tabc <CR>
 nnoremap <CR> i <CR><ESC>k$
 nnoremap <F9> :YcmCompleter FixIt <CR>
+vnoremap <C-C> :w !xsel -b<CR><CR>
