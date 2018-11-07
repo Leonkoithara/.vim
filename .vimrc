@@ -25,10 +25,18 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>gic :YcmCompleter GoToInclude<CR>
+nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gip :YcmCompleter GoToImprecise<CR>
+nnoremap <leader>f :YcmCompleter FixIt<CR>
+ 
 nnoremap F :NERDTreeToggle <CR>
+ 
 nnoremap w <C-w>w
 nnoremap <C-n> :tabnew<Space>
 nnoremap <C-c> :tabc <CR>
+ 
 nnoremap <CR> i <CR><ESC>k$
-nnoremap <F9> :YcmCompleter FixIt <CR>
 vnoremap <C-C> :w !xsel -b<CR><CR>
