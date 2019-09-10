@@ -7,3 +7,6 @@
 [submodule "plugged/youcompleteme"]
 	path = plugged/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe
+[submodule "plugged/vwrite"]
+	path = plugged/vwrite
+	url = https://github.com/Leonkoithara/vwrite

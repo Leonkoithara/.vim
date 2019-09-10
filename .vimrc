@@ -40,7 +40,7 @@ nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gip :YcmCompleter GoToImprecise<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
  
-nnoremap F :NERDTreeToggle <CR>
+nnoremap T :NERDTreeToggle <CR>
  
 "use gt to goto next tab gT to prev #gt to goto #tab
 nnoremap <C-n> :tabnew<Space>
@@ -51,8 +51,15 @@ vnoremap <C-C> :w !xsel -b<CR><CR>
 nnoremap <leader>n i <CR><ESC>k$
 "c skel
 nnoremap <leader>c :call CSkel()<CR>
+"Remove comments
+nnoremap <leader>r :call RemoveComments()<CR><CR>
 
 func! CSkel()
 	exe 'r' . "~/.vim/templates/basic_skel.c"
 	exe "normal! kdd"
+endfunc
+
+func! RemoveComments()
+	w
+	!~/.vim/scripts/RemoveComments.sh %:p
 endfunc
