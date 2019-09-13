@@ -24,6 +24,9 @@ set statusline+=%c
 set statusline+=\ %p%%
 set statusline+=(%L)
 
+set splitbelow
+set splitright
+
 call plug#begin('~/.vim/plugged')
 
 	Plug 'scrooloose/nerdtree'
@@ -45,10 +48,21 @@ nnoremap T :NERDTreeToggle <CR>
 "use gt to goto next tab gT to prev #gt to goto #tab
 nnoremap <C-n> :tabnew<Space>
 nnoremap <C-c> :tabc <CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
  
 vnoremap <C-C> :w !xsel -b<CR><CR>
 
 nnoremap <leader>n i <CR><ESC>k$
+inoremap ( ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap [ []<Left>
+inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+inoremap { {<CR>}<Left><C-o>k<C-o>o
+inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
+
 "c skel
 nnoremap <leader>c :call CSkel()<CR>
 "Remove comments

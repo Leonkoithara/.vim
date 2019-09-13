@@ -1,9 +1,10 @@
-"zt to move cursor to top of screen
-"zb to bottom
-"zz to middle
-"L to reach bottom line
-"H to first
-"M to middle
-"\c for c template
-"gt/T for tab switch
-"v/hsplit for split screens
+zt to move cursor to top of screen
+zb to bottom
+zz to middle
+L to reach bottom line
+H to first
+M to middle
+\c for c template
+gt/T for tab switch
+v/hsplit for split screens
+<C-w> |/_ for maximising split screens
